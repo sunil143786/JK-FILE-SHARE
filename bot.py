@@ -21,7 +21,7 @@ import pytz
 
 import pyromod.listen
 import time, os
-from jk_dev import web_server
+from SAFARI import web_server
 from utils import temp
 from aiohttp import web
 from pyrogram.errors import AccessTokenExpired, AccessTokenInvalid
