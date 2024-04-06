@@ -55,8 +55,8 @@ async def stream_download(bot, query):
         file_id=file_id)   
     online = f"{URL}watch/{msg.id}"
     download = f"{URL}download/{msg.id}"
-    short_watch await import_site(online) 
-    short_download await import_site(download) 
+    short_watch = await import_site(online) 
+    short_download = await import_site(download) 
     if SHORT_MODE == True:
         await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
             reply_markup=InlineKeyboardMarkup(
