@@ -73,9 +73,6 @@ async def start():
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
     SafariBot.username = '@' + me.username
-    app = web.AppRunner(await web_server())
-    await app.setup()
-    await web.TCPSite(app, "0.0.0.0", PORT).start()
     logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
     logging.info(LOG_STR)
     logging.info(script.LOGO)
