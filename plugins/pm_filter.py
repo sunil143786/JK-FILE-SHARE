@@ -32,6 +32,10 @@ from database.gfilters_mdb import (
     del_allg
 )
 import logging
+import logging
+from urllib.parse import quote_plus
+from SAFARI.util.file_properties import get_name, get_hash, get_media_file_size
+
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -47,14 +51,15 @@ BUTTONSS = {}
 
 @Client.on_callback_query(filters.regex(r"^streaming"))
 async def stream_download(bot, query):
-    file_id = query.data.split('#', 1)[1]
+    file_id = query.data.split('#') 
     user_id = query.from_user.id
     username =  query.from_user.mention 
     msg = await bot.send_cached_media(
         chat_id=BIN_CHANNEL,
         file_id=file_id)   
-    online = f"{URL}watch/{msg.id}"
-    download = f"{URL}download/{msg.id}"
+    fileName = {quote_plus(get_name(msg))}
+    online = f"{URL}watch/{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
+    download = f"{URL}{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
     short_watch = await import_site(online) 
     short_download = await import_site(download) 
     if SHORT_MODE == True:
