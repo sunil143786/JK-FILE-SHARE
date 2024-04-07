@@ -26,6 +26,7 @@ logging.basicConfig(
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
 import asyncio
+import sys
 import importlib
 import glob
 from pathlib import Path
