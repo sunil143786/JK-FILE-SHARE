@@ -1,7 +1,9 @@
 class script(object):
-    START_TXT = """<b>Hᴇʟʟᴏ {},
-ɪᴍ sɪᴍᴘʟᴇ ғɪʟᴇ sʜᴀʀᴇ ʙᴏᴛ</b>"""
-
+    START_TXT = """<b>Hᴇʟʟᴏ {}, ɪᴍ sɪᴍᴘʟᴇ ғɪʟᴇ sʜᴀʀᴇ ʙᴏᴛ</b>"""
+    
+    NOT_MESSAGE = """❌Don't send me messages directly I'm only File Share bot
+मैं केवल फ़ाइल देने के लिए हूं"""
+    
     STATUS_TXT = """<b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
