@@ -22,4 +22,10 @@ aiofiles
 pyromod==1.5
 
 telegraph
-openai
+
+jinja2
+apscheduler
+pyshorteners
+pyromod
+colorama
+openai==0.25.0
