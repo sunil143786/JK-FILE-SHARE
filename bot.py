@@ -26,6 +26,7 @@ logging.basicConfig(
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
 import asyncio
+import glob
 from aiohttp import web
 from pyrogram import idle
 from plugins import web_server
