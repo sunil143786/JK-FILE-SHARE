@@ -6,7 +6,7 @@ import secrets
 import time
 import mimetypes
 from aiohttp.http_exceptions import BadStatusLine
-from SAFARI.bot import multi_clients, work_loads, SafariBot
+from SAFARI.util import multi_clients, work_loads, SafariBot
 from SAFARI.server.exceptions import FIleNotFound, InvalidHash
 from SAFARI import StartTime, __version__
 from SAFARI.util.custom_dl import ByteStreamer
