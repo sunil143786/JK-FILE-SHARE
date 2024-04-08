@@ -8,7 +8,7 @@ import mimetypes
 from aiohttp.http_exceptions import BadStatusLine
 from SAFARI.util import multi_clients, work_loads, SafariBot
 from SAFARI.util.exceptions import FIleNotFound, InvalidHash
-from SAFARI.template import StartTime, __version__
+from SAFARI import StartTime, __version__
 from SAFARI.util.custom_dl import ByteStreamer
 from SAFARI.util.time_format import get_readable_time
 from SAFARI.util.render_template import render_page
