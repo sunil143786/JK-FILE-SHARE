@@ -33,10 +33,10 @@ import glob
 from pathlib import Path
 from aiohttp import web
 from pyrogram import idle
-from plugins import web_server
-from SAFARI.bot import SafariBot
+from SAFARI import web_server
+from SAFARI.util import SafariBot
 from SAFARI.util.keepalive import ping_server
-from SAFARI.bot.clients import initialize_clients
+from SAFARI.util.clients import initialize_clients
 
 
 ppath = "plugins/*.py"
