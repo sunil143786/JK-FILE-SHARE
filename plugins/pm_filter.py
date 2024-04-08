@@ -59,7 +59,7 @@ async def stream_download(bot, query):
     username =  query.from_user.mention 
     
     fileName = {quote_plus(get_name(log_msg))}
-    stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+    online = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
     await log_msg.reply_text(
