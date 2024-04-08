@@ -49,7 +49,7 @@ BUTTONS1 = {}
 BUTTON0 = {}
 BUTTONSS = {}
 
-@Client.on_callback_query(filters.regex(r"^streeaming"))
+@Client.on_callback_query(filters.regex(r"^streaming"))
 async def stream_download(bot, query):
     file_id = query.data.split("#")
     user_id = query.from_user.id
@@ -616,7 +616,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await del_allg(query.message, 'gfilters')
         await query.answer("Dᴏɴᴇ !")
         return
-    elif query.data.startswith("streaming"):
+    elif query.data.startswith("streamsjing"):
         _, file_id = query.data.split("#")
         try:
             user_id = query.from_user.id
