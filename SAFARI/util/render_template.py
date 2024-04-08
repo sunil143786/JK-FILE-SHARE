@@ -3,7 +3,7 @@ from info import *
 from SAFARI.bot import SafariBot
 from SAFARI.util.human_readable import humanbytes
 from SAFARI.util.file_properties import get_file_ids
-from SAFARI.server.exceptions import InvalidHash
+from SAFARI.util.exceptions import InvalidHash
 import urllib.parse
 import logging
 import aiohttp
