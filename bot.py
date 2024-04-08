@@ -33,7 +33,7 @@ import glob
 from pathlib import Path
 from aiohttp import web
 from pyrogram import idle
-from SAFARI import web_server
+from template import web_server
 from SAFARI.util import SafariBot
 from SAFARI.util.keepalive import ping_server
 from SAFARI.util.clients import initialize_clients
