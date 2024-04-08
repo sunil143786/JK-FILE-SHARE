@@ -74,10 +74,10 @@ async def stream_download(bot, query):
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
                                             InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
     )
-except Exception as e:
-    print(e)  # print the error message
-    await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
-    return
+    except Exception as e:
+        print(e)  # print the error message
+        await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
+        return
 
 @Client.on_message(filters.private & filters.user(ADMINS) if ADMINS else filters.private & filters.text)
 async def pv_filter(client, message):
