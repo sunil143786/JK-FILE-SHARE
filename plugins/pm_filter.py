@@ -51,59 +51,33 @@ BUTTONSS = {}
 
 @Client.on_callback_query(filters.regex(r"^streeaming"))
 async def stream_download(bot, query):
-    file_id = query.data.split('#') 
+    file_id = query.data.split("#")
     user_id = query.from_user.id
     username =  query.from_user.mention 
-    msg = await bot.send_cached_media(
+
+    log_msg = await bot.send_cached_media(
         chat_id=BIN_CHANNEL,
-        file_id=file_id)   
-    fileName = {quote_plus(get_name(msg))}
-    online = f"{URL}watch/{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
-    download = f"{URL}{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
-    short_watch = await import_site(online) 
-    short_download = await import_site(download) 
-    if SHORT_MODE == True:
-        await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=short_download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=short_watch)
-                ]
-            ]
-        ))
-        await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=short_download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=short_watch)
-                ],[
-                    InlineKeyboardButton('🎦ʜᴏᴡ ᴛᴏ ᴡᴀᴛᴄʜ 🎦', url=HOW_TO_WATCH)
-                ]
-            ]
-        ))
-    else:
-        await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
-                ]
-            ]
-        ))
-        await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
-                ],[
-                    InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
-                ]
-            ]
-        ))
+        file_id=file_id,
+    )
+    fileName = {quote_plus(get_name(log_msg))}
+    stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+    download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+
+    await log_msg.reply_text(
+        text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+        quote=True,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+    )
+    await query.edit_message_reply_markup(
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                                            InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+    )
+except Exception as e:
+    print(e)  # print the error message
+    await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
+    return
 
 @Client.on_message(filters.private & filters.user(ADMINS) if ADMINS else filters.private & filters.text)
 async def pv_filter(client, message):
