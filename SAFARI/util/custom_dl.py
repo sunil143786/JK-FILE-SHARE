@@ -8,7 +8,7 @@ from pyrogram import Client, utils, raw
 from SAFARI.util.file_properties import get_file_ids
 from pyrogram.session import Session, Auth
 from pyrogram.errors import AuthBytesInvalid
-from SAFARI.server.exceptions import FIleNotFound
+from SAFARI.util.exceptions import FIleNotFound
 from pyrogram.file_id import FileId, FileType, ThumbnailSource
 
 
