@@ -278,11 +278,11 @@ async def start(client, message):
                     ]
                 )
             )
-    elif data.startswith("files"):
+    """elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
-            #await message.reply_text(text="<b>Please Search Again in Group</b>")
-        #else:
+            await message.reply_text(text="<b>Please Search Again in Group</b>")
+        else:
             chat_id = temp.SHORT.get(user)
         settings = await get_settings(chat_id)
         if settings['is_shortlink']:
@@ -299,7 +299,7 @@ async def start(client, message):
                     ]
                 )
             )
-            return
+            return"""
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
