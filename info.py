@@ -48,21 +48,21 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # stream shortlink
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'ziplinker.net')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', 'c992d5c6d3a74f6ceccbf9bc34aa27c8487c11d2')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
 HOW_TO_WATCH = environ.get('HOW_TO_WATCH', "https://t.me/jejwowk") 
-SHORT_MODE = is_enabled((environ.get('SHORT_MODE', 'False')), False)
+SHORT_MODE = is_enabled((environ.get('SHORT_MODE', 'True')), False)
 
 
 # Verify System
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1845700490/3")
 VERIFY2_URL = environ.get('VERIFY2_URL', "ziplinker.net")
-VERIFY2_API = environ.get('VERIFY2_API', "e45148e36c775f7602b27f6036bcd96a750db1c8")
+VERIFY2_API = environ.get('VERIFY2_API', "3620dd89465003b493d4518e2dcff30aea3b1742")
 
 # shortlink 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'ziplinker.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'e45148e36c775f7602b27f6036bcd96a750db1c8')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
+SHORTLINK_API = environ.get('SHORTLINK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
 #tuturial
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/+W5plh19lZjg1')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
