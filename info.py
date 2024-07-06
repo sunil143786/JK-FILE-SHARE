@@ -62,7 +62,7 @@ VERIFY2_API = environ.get('VERIFY2_API', "3620dd89465003b493d4518e2dcff30aea3b17
 # shortlink 
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'livekhabar.online')
 SHORTLINK_API = environ.get('SHORTLINK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 #tuturial
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/36')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
