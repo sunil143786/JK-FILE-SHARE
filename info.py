@@ -49,13 +49,13 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # stream shortlink
 IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'publicearn.com')
 IMPORT_JK_API = environ.get('IMPORT_JK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
-HOW_TO_WATCH = environ.get('HOW_TO_WATCH', "https://t.me/Jaynath_Backup_Channel/36") 
+HOW_TO_WATCH = environ.get('HOW_TO_WATCH', "https://t.me/Jaynath_Backup_Channel/41") 
 SHORT_MODE = is_enabled((environ.get('SHORT_MODE', 'True')), False)
 
 
 # Verify System
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/36")
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/41")
 VERIFY2_URL = environ.get('VERIFY2_URL', "publicearn.com")
 VERIFY2_API = environ.get('VERIFY2_API', "25de9949b4bbb5418181925b78f6d6cf61ee81ed")
 
@@ -64,7 +64,7 @@ SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 #tuturial
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/36')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/41')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001998895377').split()]
