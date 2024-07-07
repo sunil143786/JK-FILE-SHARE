@@ -47,8 +47,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # stream shortlink
-IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'livekhabar.online')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
+IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'publicearn.com')
+IMPORT_JK_API = environ.get('IMPORT_JK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
 HOW_TO_WATCH = environ.get('HOW_TO_WATCH', "https://t.me/Jaynath_Backup_Channel/36") 
 SHORT_MODE = is_enabled((environ.get('SHORT_MODE', 'True')), False)
 
@@ -56,12 +56,12 @@ SHORT_MODE = is_enabled((environ.get('SHORT_MODE', 'True')), False)
 # Verify System
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/36")
-VERIFY2_URL = environ.get('VERIFY2_URL', "livekhabar.online")
-VERIFY2_API = environ.get('VERIFY2_API', "3620dd89465003b493d4518e2dcff30aea3b1742")
+VERIFY2_URL = environ.get('VERIFY2_URL', "publicearn.com")
+VERIFY2_API = environ.get('VERIFY2_API', "25de9949b4bbb5418181925b78f6d6cf61ee81ed")
 
 # shortlink 
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'livekhabar.online')
-SHORTLINK_API = environ.get('SHORTLINK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 #tuturial
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/36')
